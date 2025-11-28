@@ -218,5 +218,6 @@ function createSnow() {
 // Tworzymy śnieg co 150 ms
 setInterval(createSnow, 150);
 
+localStorage.clear();
 
 
