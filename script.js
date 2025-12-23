@@ -220,4 +220,3 @@ setInterval(createSnow, 150);
 
 
 
-localStorage.clear();
