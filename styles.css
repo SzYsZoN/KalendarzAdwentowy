@@ -159,3 +159,23 @@ h1 {
 #final-message.visible {
   opacity: 1;
 }
+
+#music-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  transition: background .2s;
+}
+
+#music-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+}

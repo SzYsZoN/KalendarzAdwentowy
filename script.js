@@ -94,12 +94,7 @@ function openDoor(number, element) {
     showModal(color,number);
     return;
   }
-
-  if (!isAlreadyOpened) {
-  const sound = document.getElementById("open-sound");
-  sound.currentTime = 0; // restart jeśli klikane szybko
-  sound.play();
-}
+  
 
   // Jeśli jeszcze nie otwarty → sprawdź datę
   if (!TEST_MODE && number !== today) {
@@ -218,6 +213,21 @@ function createSnow() {
 // Tworzymy śnieg co 150 ms
 setInterval(createSnow, 150);
 
-localStorage.clear();
 
 
+const music = document.getElementById("bg-music");
+const musicBtn = document.getElementById("music-toggle");
+
+let musicOn = false;
+
+musicBtn.addEventListener("click", () => {
+  if (!musicOn) {
+    music.play();
+    musicOn = true;
+    musicBtn.textContent = "🔊";
+  } else {
+    music.pause();
+    musicOn = false;
+    musicBtn.textContent = "🔇";
+  }
+});
